@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo '=== Installation des dépendances Apache ==='
         sh '''
-          set -euxo pipefail
+          set -eu
           sudo apt update -y
           sudo apt install -y apache2
           sudo systemctl enable apache2 || true
